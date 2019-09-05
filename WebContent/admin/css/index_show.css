@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+.main-div{
+    width: 96%;
+    height: 650px;
+    margin-left: 2%;
+    margin-top: 10px;
+    padding-top: 20px;
+    box-shadow: #31b0d5 0 0 3px 0;
+    border-radius: 3px;
+}
+.count-div{
+	background: #efffef;
+	height: 150px;
+	margin-left: 40px;
+	box-shadow: #abcefa 0 0 3px 0;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 60px;
+}

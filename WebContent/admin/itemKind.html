@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>物品类型管理页面</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/itemKind.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <script src="js/global.js"></script>
+    <script src="js/itemKind.js"></script>
+</head>
+<body>
+<div class="content">
+	<div class="position">
+	    <div class="marginCtrl">
+	        <a href="">首页</a>
+	        <span class="fa fa-arrow-right">-></span>
+	        <a href="">当前位置</a>
+	    </div>
+	</div>
+	<div class="contain">
+	    <div class="longControl">
+	    <div class="contain-left">
+	        <button type="button" class="btn btn-success" id="addBtn">增加</button>
+	         <button type="button" class="btn btn-danger" id="selectDeleteBtn">ID删除</button>
+	        
+	    </div>
+	    <div class="searchBox">
+	        <form class="form-inline" onsubmit="return searchKind()">
+	            <div class="form-group has-success has-feedback">
+	                <label class="control-label" for="inputSuccess4">查找物品:</label>
+	                <input type="text" class="form-control" id="keyword" aria-describedby="inputSuccess4Status" placeholder="输入关键字按enter搜索">
+	                <span class="fa fa-chevron-circle-right form-control-feedback" aria-hidden="true"></span>
+	            </div>
+	        </form>
+	    </div>
+	</div>
+	</div>
+	<div class="form">
+	    <table class="table table-hover">
+	        <tr>
+	            <th>编号</th>
+	            <th>名称</th>
+	            <th>描述</th>
+	            <th>每小时价格</th>
+	            <th></th>
+	        </tr>
+	        <tbody id="tbody">
+	        
+	        </tbody>
+	    </table>
+	</div>
+</div>
+
+
+	<div class ="addDiv" id="add-div" >
+		<form onsubmit="return false">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">名称</label>
+			    <input type="text" class="form-control" id="addKindName" placeholder="填写名称">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">描述</label>
+			    <textarea class="form-control" rows="3"  id="addKindDecoration" placeholder="请补充描述内容"></textarea>
+			  </div>
+			 <div class="form-group">
+			    <label for="exampleInputPassword1">价格</label>
+			    <input type="text" class="form-control" id="addKindPrice" placeholder="添加价格">
+			  </div>
+		
+			<input type="hidden" class="form-control" id="addKindId"  >
+			<div >
+			  <button type="submit" class="btn btn-default" id ="addSubmit">确定</button>
+			  <button type="button" class="btn btn-default" id="cancelBtn1" style = margin-left:10%>取消</button>
+			</div>
+		</form>
+	</div>
+	<div id="update-div" class = "updateDiv">
+		<form onsubmit="return false">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">名称</label>
+		    <input type="text" class="form-control" id="updateKindName" placeholder="名称">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">描述</label>
+		    <textarea class="form-control" rows="3"  id="updateKindDecoration"></textarea>
+		  </div>
+		 <div class="form-group">
+		    <label for="exampleInputPassword1">价格</label>
+		    <input type="text" class="form-control" id="updateKindPrice" placeholder="修改价格">
+		  </div>
+	
+		<input type="hidden" class="form-control" id="updateKindId" >
+		  <button type="submit" class="btn btn-default" id ="updateSubmit">修改</button>
+		  <button type="button" class="btn btn-default" id="cancelBtn" style = margin-left:10%>取消</button>
+		</form>
+	</div>
+	<div class="selectDeleteDiv" id="delete-div">
+		<div class="form-group">
+		   <label for="inputPassword2" class="sr-only">Password</label>
+		   <input type="text" class="form-control" id="inputIdToChose" placeholder="请输入想要删除的货品ID">
+		   <button type="submit" class="btn btn-default" id ="selectDeleteSubmit">确定</button>
+		   <button type="button" class="btn btn-default" id="cancelBtn2" >取消</button>
+		</div>
+	</div>
+</body>
+</html>

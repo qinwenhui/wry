@@ -1,0 +1,105 @@
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+.m-top-div{
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    position: fixed;
+    box-shadow: 0px 0px 2px 0px #fff;
+    background: #3a3a3a;
+}
+.logo-div{
+    margin-left: 100px;
+    width: 300px;
+    height: 100%;
+    float: left;
+}
+.logo-div img{
+    width: 50px;
+    height: 50px;
+}
+.logo-font{
+    margin-left: 10px;
+    font-size: large;
+    color: #d0d443;
+    line-height: 80px;
+}
+.time-ip-div{
+    width: 400px;
+    height: 100%;
+    float: right;
+}
+.admin-div{
+    margin-right: 100px;
+    margin-left: 20px;
+    width: 200px;
+    height: 100%;
+    float: right;
+    line-height: 80px;
+    padding-left: 10px;
+}
+.admin-icon{
+    float: left;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+.icon-hover-div{
+    width: 100px;
+    height: 80px;
+    margin-top: -20px;
+    display: none;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 2px;
+    float: left;
+    background-color: #d8fdff;
+}
+.m-left-div{
+    width: 15%;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    background: #5c5c5c;
+}
+.left-ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    background: #bababa;
+}
+.left-ul li{
+    width: 100%;
+    height: auto;
+    line-height: 60px;
+    padding-left: 10px;
+    border-bottom: solid 1px rgba(43, 76, 22, 0.86);
+    background: #5c5c5c;
+}
+.left-ul li:hover{
+    background: rgba(100, 101, 100, 0.86)!important;
+}
+.left-ul-ul{
+    color: transparent;
+    margin-left: -10px;
+}
+.left-ul-ul li{
+    padding-left: 35px;
+    background: rgba(128, 128, 123, 0.86);
+    border-bottom: solid 1px rgba(128, 71, 28, 0.86);
+}
+.left-ul-ul li:hover{
+    background: rgba(69, 69, 67, 0.86);
+}
+.m-content-div{
+    padding-top: 20px;
+    width: 85%;
+    height: 100%;
+    margin-top: 80px;
+    margin-left: 15%;
+    background: #fff;
+}

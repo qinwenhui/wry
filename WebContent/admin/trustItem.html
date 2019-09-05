@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/trustItem.css">
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" ></script>
+    <script src="js/trustItem.js" type="text/javascript" ></script>
+</head>
+<body>
+<div class="main-div">
+    <!-- 放搜索框-->
+    <div class="seach-div">
+        <font style="float: left;line-height: 50px;margin-left: 10px;" color="#123456">位置->物品管理</font>
+        <form class="form-inline seach-form" onsubmit="return false;">
+            <div class="form-group">
+                <p class="form-control-static">查询物品</p>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword2" class="sr-only">关键字</label>
+                <input type="text" class="form-control" id="keywork">
+            </div>
+            <button type="submit" class="btn btn-default" id="seachBtn">搜索</button>
+        </form>
+    </div>
+    <br>
+    &nbsp;&nbsp;<button type="button" class="btn btn-info" id="allItemBtn">全部物品</button>
+    &nbsp;&nbsp;<button type="button" class="btn btn-info" id="selectDeleteBtn">批量删除</button>
+    <br>
+    <!-- 放表格 -->
+    <div class="table-div">
+        <table class="table table-hover">
+            <tr>
+                <th>选择</th>
+                <th>编号</th>
+                <th>图片</th>
+                <th>名称</th>
+                <th>备注</th>
+                <th>托管用户编号</th>
+                <th>物品类型编号</th>
+                <th></th>
+            </tr>
+            <tbody id="tr-div"></tbody>   
+        </table>
+        <!-- 分页 -->
+        <div class="fenye">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- 修改提示框 -->
+<div class="update-div" id="update-div">
+	<div class="update-div-title-div">
+		<font color="#61a">修改物品</font>
+		<img alt="" src="images/close.png" width="20px" height="20px" style="float:right;" id="cancelImg">
+	</div>
+	<!-- 修改提示框的内容 -->
+	<div class="update-div-content-div">
+		<form onsubmit="return false" id="updateForm">
+		  <div class="form-group">
+		    <label>名称</label>
+		    <input type="text" class="form-control" placeholder="名称" style="height: 40px;" id="itemName" name="name">
+		  </div>
+		  <div class="form-group">
+		    <label>备注</label>
+		    <textarea class="form-control" rows="5" id="itemContent" name="notes"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" id="updateSubmit">修改</button>
+		  </div>
+		  <input type="hidden" value="" name="id" id="idInput">
+		  
+		</form>
+	</div>
+</div>
+</body>
+</html>

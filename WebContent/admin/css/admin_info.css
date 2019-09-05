@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+.main-div{
+    width: 96%;
+    height: 600px;
+    margin-left: 2%;
+    margin-top: 10px;
+    box-shadow: #31b0d5 0 0 3px 0;
+    border-radius: 3px;
+}
+.icon-div{
+	text-align: center;
+	width: 100%;
+	height: 200px;
+	line-height: 200px;
+}
+.info-div{
+	text-align: center;
+	width: 100%;
+	height: 200px;
+	line-height: 50px;
+}
+.update-div{
+	width: 30%;
+	height: 450px;
+	background: #ffefef;
+	float: left;
+	left: 40%;
+	top: 20%;
+	position: fixed;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 0px #abc;
+	padding: 50px;
+	display: none;
+}
+.update-div button{
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 10px;
+	height: 40px;
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.qinwh.wry.mapper.HOrderMapper" >
+  <resultMap id="BaseResultMap" type="cn.qinwh.wry.po.HOrder" >
+    <id column="Id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="transaction_time" property="transactionTime" jdbcType="TIMESTAMP" />
+    <result column="satisfaction" property="satisfaction" jdbcType="INTEGER" />
+    <result column="waiter_id" property="waiterId" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    Id, user_id, state, transaction_time, satisfaction, waiter_id, price
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from housework_order
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from housework_order
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.qinwh.wry.po.HOrder" >
+    insert into housework_order (Id, user_id, state, 
+      transaction_time, satisfaction, waiter_id, 
+      price)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, 
+      #{transactionTime,jdbcType=TIMESTAMP}, #{satisfaction,jdbcType=INTEGER}, #{waiterId,jdbcType=INTEGER}, 
+      #{price,jdbcType=DOUBLE})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.qinwh.wry.po.HOrder"  keyProperty="id" useGeneratedKeys="true">
+    insert into housework_order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        Id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="transactionTime != null" >
+        transaction_time,
+      </if>
+      <if test="satisfaction != null" >
+        satisfaction,
+      </if>
+      <if test="waiterId != null" >
+        waiter_id,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="transactionTime != null" >
+        #{transactionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="satisfaction != null" >
+        #{satisfaction,jdbcType=INTEGER},
+      </if>
+      <if test="waiterId != null" >
+        #{waiterId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.qinwh.wry.po.HOrder" >
+    update housework_order
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="transactionTime != null" >
+        transaction_time = #{transactionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="satisfaction != null" >
+        satisfaction = #{satisfaction,jdbcType=INTEGER},
+      </if>
+      <if test="waiterId != null" >
+        waiter_id = #{waiterId,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.qinwh.wry.po.HOrder" >
+    update housework_order
+    set user_id = #{userId,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      transaction_time = #{transactionTime,jdbcType=TIMESTAMP},
+      satisfaction = #{satisfaction,jdbcType=INTEGER},
+      waiter_id = #{waiterId,jdbcType=INTEGER},
+      price = #{price,jdbcType=DOUBLE}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  	select * from housework_order
+  </select>
+  <select id="selectByWaiterId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  	select * from housework_order where waiter_id = #{waiter_id}
+  </select>
+  <select id="selectByState" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  	select * from housework_order where state = #{state}
+  </select>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+  	select * from housework_order where user_id = #{user_id}
+  </select>
+  <select id="selectByPrice" resultMap="BaseResultMap">
+  	select * from housework_order where price &gt;= #{0} and price &lt;= #{1}
+  </select>
+</mapper>

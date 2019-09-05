@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"href="css/version.css"type="text/css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/version.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<div class="main-div">
+    <!--放搜索框 -->
+    <div class="seach-div">
+        <div class="seach-div-1">
+            <p>查询条件</p>
+        </div>
+        <div class="seach-div-2">
+            <form class="form-inline mycenter" onsubmit="return false">
+                <div class="form-group">
+                    <label for="exampleInputName2">关键词</label>
+                    <input type="text" class="form-control" id="keyword">
+                </div>
+                <button type="submit" class="btn btn-default" id="searchBtn" style="margin-bottom: 5px;">查询</button>
+            </form>
+        </div>
+    </div>
+    <div class="table-div">
+    	<button type="button" class="btn btn-success" style="margin: 10px;" id="allVersionBtn">全部</button>
+        &nbsp;&nbsp;<button type="button" class="btn btn-success" style="margin: 10px;" id="addVersionBtn">添加</button>
+        &nbsp;&nbsp;<button type="button" class="btn btn-info" id="selectDeleteBtn">删除</button>
+        <table class="table table-hover">
+            <tr>
+            	<th></th>
+            	<th>ID</th>
+                <th>名称</th>
+                <th>开发版本号</th>
+                <th>发布版本号</th>
+                <th>描述</th>
+                <th>发布时间</th>
+                <th>下载地址</th>
+                <th></th>
+            </tr>
+            <tbody id="tr-div"></tbody> 
+        </table>
+        <nav aria-label="Page navigation" style="float: right;">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- 修改提示框 -->
+<div class="updateVersion-div" id="updateVersion-div">
+	<div style="margin: 50px 100px;">
+		<form onsubmit="return false" id="updateVersionForm">
+		  <div class="form-group">
+		    <label>应用名称</label>
+		    <input type="text" class="form-control" placeholder="名称" style="height: 40px;" id="updateAppName" name="appName">
+		  </div>
+		  <div class="form-group">
+		    <label>开发版本号</label>
+		    <input type="text" class="form-control" placeholder="开发版本code为整型数字" style="height: 40px;" id="updateVersionCode" name="versionCode">
+		  </div>
+		  <div class="form-group">
+		    <label>发布版本号</label>
+		    <input type="text" class="form-control" style="height: 40px;" id="updateVersionName" name="versionName">
+		  </div>
+		  <div class="form-group">
+		    <label>下载地址</label>
+		    <input type="text" class="form-control" placeholder="http://或https://开头" style="height: 40px;" id="updateVersionDownload" name="download">
+		  </div>
+		  <div class="form-group">
+		    <label>版本介绍</label>
+		    <textarea class="form-control" rows="5" id="updateVersionContent" name="content"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" id="updateVersionSubmit">修改</button>
+		    <button type="submit" class="btn btn-primary" id="cancelUpdateBtn">取消</button>
+		  </div>
+		  <input type="hidden" id="updateVersionId" name="id">
+		</form>
+	</div>
+</div>
+<!-- 添加版本的框 -->
+<div class="addVersion-div" id="addVersion-div">
+	<div style="margin: 50px 100px;">
+		<form onsubmit="return false" id="addVersionForm">
+		  <div class="form-group">
+		    <label>应用名称</label>
+		    <input type="text" class="form-control" placeholder="名称" style="height: 40px;" id="appName" name="appName">
+		  </div>
+		  <div class="form-group">
+		    <label>开发版本号</label>
+		    <input type="text" class="form-control" placeholder="开发版本code为整型数字" style="height: 40px;" id="versionCode" name="versionCode">
+		  </div>
+		  <div class="form-group">
+		    <label>发布版本号</label>
+		    <input type="text" class="form-control" style="height: 40px;" id="versionName" name="versionName">
+		  </div>
+		  <div class="form-group">
+		    <label>下载地址</label>
+		    <input type="text" class="form-control" placeholder="http://或https://开头" style="height: 40px;" id="versionDownload" name="download">
+		  </div>
+		  <div class="form-group">
+		    <label>版本介绍</label>
+		    <textarea class="form-control" rows="5" id="versionContent" name="content"></textarea>
+		  </div>
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary" id="addVersionSubmit">提交</button>
+		    <button type="submit" class="btn btn-primary" id="cancelAddBtn">取消</button>
+		  </div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无人忧后台管理</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/global.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<!--最外层-->
+<div>
+    <!-- 左侧栏 -->
+    <div class="m-left-div">
+        <nav>
+            <ul class="left-ul">
+                <li id="main_admin">
+                    <img src="images/ic_main.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">后台首页</font>
+                </li>
+
+                <li id="user_admin">
+                    <img src="images/ic_user.png" width="20px" height="20px">
+                    <a href="#"><font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">用户管理</font></a>
+                </li>
+                <li id="waiter_admin">
+                    <img src="images/ic_user.png" width="20px" height="20px">
+                    <a href="#"><font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">服务员管理</font></a>
+                </li>
+                
+                <li id="item_admin">
+                    <img src="images/ic_app.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">托管物品管理</font>
+                </li>
+				<li id="kind_admin">
+                    <img src="images/ic_app.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">物品类型管理</font>
+                </li>
+                <li id="trust_order_admin">
+                    <img src="images/ic_order.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">托管订单管理</font>
+                </li>
+                <li id="housework_order_admin">
+                    <img src="images/ic_order.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">家务订单管理</font>
+                </li>
+                <li id="trust_order_review_admin">
+                    <img src="images/ic_feedback.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">托管评论管理</font>
+                </li>
+                <li id="housework_order_review_admin">
+                    <img src="images/ic_feedback.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">家务评论管理</font>
+                </li>
+                <li id="feedback_admin">
+                    <img src="images/ic_feedback.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">反馈管理</font>
+                </li>
+
+                <li id="notice_admin">
+                    <img src="images/ic_notice.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">通知管理</font>
+                    
+                </li>
+                <li id="version_admin">
+                    <img src="images/ic_app.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">版本管理</font>
+                </li>
+                <li id="add_admin">
+                    <img src="images/ic_app.png" width="20px" height="20px">
+                    <font color="#eaeaea" style="margin-left: 10px;font-size: 16px;">添加管理员</font>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 导航栏 -->
+    <div class="m-top-div">
+        <!-- 放logo -->
+        <div class="logo-div">
+            <img src="images/logo.png">
+            <font class="logo-font">无人忧APP后台管理系统</font>
+        </div>
+        <!-- 显示管理员头像和相关信息 -->
+        <div class="admin-div">
+            <div>
+                <img class="admin-icon" src="images/icon.jpg" id="IndexAdminIcon">
+                <font style="margin-left: 10px;" color="#f0f8ff" id="IndexAdminUsername">用户名</font>
+                <!-- 鼠标滑到头像时显示的div -->
+                <div class="icon-hover-div">
+                    <nav>
+                        <p><a href="javascript:void(0);" id="adminInfo"><font>个人信息</font></a></p>
+                        <p><a href="javascript:void(0);" id="cleanLogin"><font color="red">注销</font></a></p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- 显示登录时间和ip的div -->
+        <div class="time-ip-div">
+            <font style="font-size: medium;line-height: 80px;color: #c2cb32;">IP：</font>
+            <font style="font-size: medium;color: #f4fff5;" id="ip">127.0.0.1</font>
+            <font style="font-size: medium;margin-left: 15px;color: #c2cb32;">当前时间：</font>
+            <font style="font-size: medium;color: #f4fff5;" id="time">2019-04-13 21:30:07</font>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="m-content-div" id="content-div">
+        
+    </div>
+</div>
+</body>
+</html>

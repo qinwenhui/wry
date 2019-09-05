@@ -1,0 +1,110 @@
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+.position{
+    width: 100%;
+    height: 40px;
+    background-color:  rgba(174, 174, 174, 0.09);
+}
+.content{
+	width:96%;
+	margin-left: 2%;
+	margin-top: 10px;
+	height:100%;
+	box-shadow: 0px 0px 3px 0px #eab0b0;
+	float:left;
+}
+.marginCtrl{
+    width: 100%;
+    height: 40px;
+    margin-left: 1%;
+    line-height: 40px;
+}
+.position a{
+    font-family:"Helvetica Neue";
+    font-size: 14px;
+    color: #83a8fb;
+}
+.position a:hover{
+    text-decoration: none;
+    color: #b0b0b0;
+}
+.form{
+    width: 98%;
+    height: 100%;
+    box-shadow: 0 0px 3px 0 #efeeff;
+    float: left;
+    margin-top:10px;
+    margin-left: 1%;
+    margin-bottom: 30px;
+}
+
+.contain{
+    width: 100%;
+    height: 40px;
+
+}
+.longControl{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-left: 1%;
+    
+}
+.contain-left{
+    width: 15%;
+    height: 40px;
+    float: left;
+
+}
+.searchBox{
+    width: 30%;
+    height: 40px;
+    float: right;
+    margin-right: 2%;
+    text-align: right;
+}
+.addDiv{
+	width: 40%;
+	height:350px;
+	background:#efefef;
+	float:left;
+	margin-top:5%;
+	margin-left: 25%;
+	position: fixed;
+	display: none;
+	padding:20px 40px;
+	line-height:25px;
+	box-shadow: 0px 0px 3px 0px #b0b0b0;
+	border-radius: 5px;
+}
+.updateDiv{
+	width: 40%;
+	height:350px;
+	background: #efefef;
+	float:left;
+	margin-top:5%;
+	margin-left: 25%;
+	position: fixed;
+	display: none;
+	padding:25px 40px;
+	line-height:25px;
+	box-shadow: 0px 0px 3px 0px #b0b0b0;
+	border-radius: 5px;
+}
+.selectDeleteDiv{
+	width: 40%;
+	height:100px;
+	background: #efefef;
+	float:left;
+	margin-top:10%;
+	margin-left: 30%;
+	position: fixed;
+	display: none;
+	padding:25px 40px;
+	line-height:25px;
+	box-shadow: 0px 0px 3px 0px #b0b0b0;
+	border-radius: 5px;
+}

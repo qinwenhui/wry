@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系统登录</title>
+<link href="css/login.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+</head>
+<body background="images/login_bg.jpg" style="size: 100%;">
+<div class="login-box">
+	<h1>无人忧APP后台管理</h1>
+	<form method="post" action="" onsubmit="return false" id="loginForm">
+		<div class="name">
+			<label>管理员账号：</label>
+			<input type="text" name="username" id="username" tabindex="1" autocomplete="off" />
+		</div>
+		<div class="password">
+			<label>密  码：</label>
+			<input type="password" name="password" maxlength="16" id="password" tabindex="2"/>
+		</div>
+		<div class="code">
+			<label>验证码：</label>
+			<input type="text" name="code" maxlength="4" id="code" tabindex="3"/>
+			<div class="codeImg">
+				<img src="" id="codeImg"/>
+			</div>
+			<span><font color="red" size="1" style="display:none;" id="codeMsg">验证码错误</font></span>
+		</div>	
+		<br><br>
+		<div class="login">
+			<button type="submit" tabindex="5" id="loginSubmit">登录</button>
+		</div>
+	</form>
+</div>
+
+<div class="bottom">©2019 Qwh <a href="javascript:;" target="_blank">关于</a> <span>无人忧wry</span></div>
+</body>
+</html>
